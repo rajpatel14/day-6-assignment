@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link type="css" href="toggle.css"> 
+        <title>Day 6 assignment</title> 
+    </head>
+    <body> 
+        <h2 id='time'></h2> 
+        <h3 id='d'>HII</h3>
+    <script> 
+        var name=prompt("Enter your Good Name:"); 
+        document.write(`Welcome ${name}, Have a nice Day.`)
+        <button id="dark">Switch to Dark Mode</button> 
+        const ctime = document.getElementById('time'); 
+        function clock(){ let date = new Date(); 
+            let time = date.toLocaleTimeString(); 
+            ctime.innerText = time;
+        }
+        setInterval(clock,1000); 
+        var d=document.getElementById('d');
+        d.classList.add('dark-mode');
+        d.classList.toggle("dark-mode"); 
+        const dmode = document.getElementById('dark'); 
+        dmode.onclick = function changeColor(){ document.body.style.backgroundColor = 'black'; 
+        document.body.style.color = 'white'; 
+        document.body.style.fontFamily = 'Helvetica'; 
+        }
+    </script> 
+</body>
+</html>
